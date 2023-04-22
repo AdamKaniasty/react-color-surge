@@ -10,7 +10,6 @@ export const Color = ({ hook, ...rest }: any) => {
   useEffect(() => {
     // const img = document.getElementById(`color-surge-img${id}`);
     const img = imgRef.current;
-    console.log(img);
     if (imgLoaded && img) {
       const canvas = document.createElement('canvas');
       // @ts-ignore
@@ -29,7 +28,6 @@ export const Color = ({ hook, ...rest }: any) => {
   }, [imgLoaded]);
   useEffect(() => {
     if (pixelData) {
-      console.log(findDominantColor(pixelData));
       hook(findDominantColor(pixelData));
     }
   }, [pixelData]);
