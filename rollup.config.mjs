@@ -2,8 +2,9 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
+import packageJson from "./package.json" assert { type: "json" };
 
-const packageJson = require("./package.json");
+// const packageJson = require("./package.json");
 
 export default [
     {

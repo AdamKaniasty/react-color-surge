@@ -37,7 +37,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "clean": "rd /s /q dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "rollup": "rollup -c"
