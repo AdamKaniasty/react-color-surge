@@ -2879,13 +2879,12 @@ var findDominantColor = function (pixelArray) {
 };
 
 var Color = function (_a) {
-    var hook = _a.hook, rest = __rest(_a, ["hook"]);
+    var rest = __rest(_a, []);
     var _b = reactExports.useState(null), pixelData = _b[0], setPixelData = _b[1];
     var _c = reactExports.useState(false), imgLoaded = _c[0], setImgLoaded = _c[1];
     var id = Math.floor(Math.random() * 8934592689354);
     var imgRef = reactExports.useRef(null);
     reactExports.useEffect(function () {
-        // const img = document.getElementById(`color-surge-img${id}`);
         var img = imgRef.current;
         if (imgLoaded && img) {
             var canvas = document.createElement('canvas');
@@ -2905,7 +2904,8 @@ var Color = function (_a) {
     }, [imgLoaded]);
     reactExports.useEffect(function () {
         if (pixelData) {
-            hook(findDominantColor(pixelData));
+            console.log(findDominantColor(pixelData));
+            // hook(findDominantColor(pixelData));
         }
     }, [pixelData]);
     return (React.createElement("div", null,

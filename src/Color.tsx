@@ -2,13 +2,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { findDominantColor} from './FindDominantColor';
 
-export const Color = ({ hook, ...rest }: any) => {
+export const Color = ({...rest }: any) => {
   const [pixelData, setPixelData] = useState<number[] | null>(null);
   const [imgLoaded, setImgLoaded] = useState(false);
   const id: number = Math.floor(Math.random() * 8934592689354);
   const imgRef = useRef(null);
   useEffect(() => {
-    // const img = document.getElementById(`color-surge-img${id}`);
     const img = imgRef.current;
     if (imgLoaded && img) {
       const canvas = document.createElement('canvas');
@@ -28,7 +27,8 @@ export const Color = ({ hook, ...rest }: any) => {
   }, [imgLoaded]);
   useEffect(() => {
     if (pixelData) {
-      hook(findDominantColor(pixelData));
+      console.log(findDominantColor(pixelData))
+      // hook(findDominantColor(pixelData));
     }
   }, [pixelData]);
   return (
