@@ -5,7 +5,9 @@
 ## Installation
 
 You can install the package using npm:
-
+```jsx
+npm install react-color-surge 
+```
 
 ## Usage
 
