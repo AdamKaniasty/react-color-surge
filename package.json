@@ -7,6 +7,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url":"https://github.com/AdamKaniasty/react-color-surge.git"
+  },
   "types": "dist/index.d.ts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
