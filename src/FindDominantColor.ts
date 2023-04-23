@@ -15,7 +15,6 @@ export const findDominantColor = (pixelArray:number[]) => {
       continue
     }
     const hexColor = rgbToHex(r, g, b)
-
     if (!colorFrequency.hasOwnProperty(hexColor)) {
       colorFrequency[hexColor] = 1
     } else {
