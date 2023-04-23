@@ -2878,8 +2878,9 @@ var findDominantColor = function (pixelArray) {
     return rgbToHex(avgRed, avgGreen, avgBlue);
 };
 
+// @ts-ignore
 var Color = function (_a) {
-    var rest = __rest(_a, []);
+    var hook = _a.hook, rest = __rest(_a, ["hook"]);
     var _b = reactExports.useState(null), pixelData = _b[0], setPixelData = _b[1];
     var _c = reactExports.useState(false), imgLoaded = _c[0], setImgLoaded = _c[1];
     var id = Math.floor(Math.random() * 8934592689354);
@@ -2904,8 +2905,7 @@ var Color = function (_a) {
     }, [imgLoaded]);
     reactExports.useEffect(function () {
         if (pixelData) {
-            console.log(findDominantColor(pixelData));
-            // hook(findDominantColor(pixelData));
+            hook(findDominantColor(pixelData));
         }
     }, [pixelData]);
     return (React.createElement("div", null,

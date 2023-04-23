@@ -1,2 +1,5 @@
 /// <reference types="react" />
-export declare const Color: ({ ...rest }: any) => JSX.Element;
+export declare const Color: ({ hook, ...rest }: {
+    [x: string]: any;
+    hook: any;
+}) => JSX.Element;
