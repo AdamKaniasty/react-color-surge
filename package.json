@@ -39,7 +39,9 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "rollup": "rollup -c"
+    "rollup": "rollup -c",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && cp package.json README.md ./dist"
   },
   "eslintConfig": {
     "extends": [
