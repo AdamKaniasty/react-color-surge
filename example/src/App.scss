@@ -1,0 +1,12 @@
+.App{
+  display: flex;
+  flex-direction: column;
+}
+
+.imgItem{
+  display: flex;
+  img{
+    width: 5vh;
+    height: 5vh;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "react-color-surge",
-  "version": "0.1.11",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

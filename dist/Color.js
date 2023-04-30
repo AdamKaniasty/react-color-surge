@@ -28,7 +28,8 @@ export const Color = (_a) => {
             canvas.height = img.offsetHeight;
             const ctx = canvas.getContext('2d');
             if (ctx) {
-                ctx.drawImage(img, 0, 0);
+                // @ts-ignore
+                ctx.drawImage(img, 0, 0, img.offsetWidth, img.offsetHeight);
                 // @ts-ignore
                 const imageData = ctx.getImageData(0, 0, img.offsetWidth, img.offsetHeight);
                 // @ts-ignore
